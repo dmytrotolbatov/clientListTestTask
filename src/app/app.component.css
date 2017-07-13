@@ -1,0 +1,63 @@
+#list-app {
+  padding: 3%;
+}
+
+.smAvatar {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.selectedClient {
+  border-bottom: solid 2px black;
+  height: 50px;
+  background-color: dodgerblue;
+}
+
+#lgAvatar {
+  float: left;
+}
+
+#mainInfo {
+  margin-left: 20%;
+}
+
+#clientsList {
+  border-right: 4px solid black;
+  height: 500px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+#input {
+  margin: 0 0 5px 0;
+}
+
+#info {
+  font-size: larger;
+}
+
+li :hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px;
+}
+
+li {
+  border-bottom: solid 1px black;
+  height: 50px;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}

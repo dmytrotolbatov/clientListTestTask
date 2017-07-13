@@ -1,0 +1,37 @@
+<div id="list-app">
+  <div id="clientsInput" class="col-sm-4">
+    <input type="text" id="input" class="form-control" [(ngModel)]="queryString">
+    <div id="clientsList">
+      <ul *ngFor="let client of clients | searchPipe: queryString">
+        <li [ngClass]="{'selectedClient': client.contact.email === currentClient.contact.email}">
+          <div (click)="selectClient(client)">
+            <img src="{{client.general.avatar}}" class="smAvatar">
+            {{client.general.firstName}} {{client.general.lastName}} <br>
+            {{client.job.title}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="clientDetail" class="col-sm-8">
+    <img src="{{currentClient?.general.avatar}}" id="lgAvatar">
+    <div id="mainInfo">
+      <h2>{{currentClient?.general.firstName}} {{currentClient?.general.lastName}}</h2>
+      <h3>{{currentClient?.job.title}} - {{currentClient?.job.company}}</h3>
+      <p id="info">
+        Address: {{currentClient?.address.country}},
+        {{currentClient?.address.city}},
+        {{currentClient?.address.street}},
+        {{currentClient?.address.zipCode}} <br> <br>
+        Email: {{currentClient?.contact.email}} <br> <br>
+        Phone: {{currentClient?.contact.phone}}
+      </p>
+    </div>
+  </div>
+  <footer>
+    <h5>
+      Contact me: Skype - dmskill94, Email - dmytrotolbatov@gmail.com
+    </h5>
+  </footer>
+</div>
+
